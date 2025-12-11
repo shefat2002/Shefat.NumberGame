@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Game Monitor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+<h2>Real-Time Number Game Monitor</h2>
+<div class="alert alert-info" role="alert">
+    Status: <span id="connectionStatus" class="fw-bold">Disconnected</span>
+</div>
+
+<div class="card">
+    <div class="card-header">Live Updates</div>
+    <div class="card-body">
+        <ul id="messagesList" class="list-group">
+        </ul>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+
+<script>
+    // 1. Build the Connection
+    const connection = new signalr.HubConnectionBuilder()
+        .withUrl("/numberHub") // This must match the URL in Program.cs
+        .withAutomaticReconnect()
+        .build();
+
+    // 2. Define the Function that the Server calls
+    // "ReceiveZeroGeneration" matches the string in NumberService.cs
+    connection.on("ReceiveZeroGeneration", function (count, arrayData) {
+
+        // Format the array for display
+        const dataString = JSON.stringify(arrayData);
+        const timestamp = new Date().toLocaleTimeString();
+
+        // Create a new list item
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-items-center";
+        li.innerHTML = `
+                <span>Generated <strong>${count}</strong> zeros: <code class="text-primary">${dataString}</code></span>
+                <span class="badge bg-secondary rounded-pill">${timestamp}</span>
+            `;
+
+        // Add to the top of the list
+        const list = document.getElementById("messagesList");
+        list.insertBefore(li, list.firstChild);
+    });
+
+    // 3. Start the Connection
+    connection.start().then(function () {
+        document.getElementById("connectionStatus").innerText = "Connected";
+        document.getElementById("connectionStatus").className = "fw-bold text-success";
+    }).catch(function (err) {
+        document.getElementById("connectionStatus").innerText = "Error";
+        document.getElementById("connectionStatus").className = "fw-bold text-danger";
+        return console.error(err.toString());
+    });
+</script>
+</body>
+</html>

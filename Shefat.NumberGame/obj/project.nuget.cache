@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "NzjXB2dQ9F4=",
+  "success": true,
+  "projectFilePath": "/Users/admin/RiderProjects/Shefat.NumberGame/Shefat.NumberGame/Shefat.NumberGame.csproj",
+  "expectedPackageFiles": [
+    "/Users/admin/.nuget/packages/messagepack/2.5.187/messagepack.2.5.187.nupkg.sha512",
+    "/Users/admin/.nuget/packages/messagepack.annotations/2.5.187/messagepack.annotations.2.5.187.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.aspnetcore.openapi/10.0.0/microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.aspnetcore.signalr.stackexchangeredis/10.0.1/microsoft.aspnetcore.signalr.stackexchangeredis.10.0.1.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.apidescription.server/10.0.0/microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.net.stringtools/17.6.3/microsoft.net.stringtools.17.6.3.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.openapi/2.3.0/microsoft.openapi.2.3.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/pipelines.sockets.unofficial/2.2.8/pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "/Users/admin/.nuget/packages/stackexchange.redis/2.7.27/stackexchange.redis.2.7.27.nupkg.sha512",
+    "/Users/admin/.nuget/packages/swashbuckle.aspnetcore/10.0.1/swashbuckle.aspnetcore.10.0.1.nupkg.sha512",
+    "/Users/admin/.nuget/packages/swashbuckle.aspnetcore.swagger/10.0.1/swashbuckle.aspnetcore.swagger.10.0.1.nupkg.sha512",
+    "/Users/admin/.nuget/packages/swashbuckle.aspnetcore.swaggergen/10.0.1/swashbuckle.aspnetcore.swaggergen.10.0.1.nupkg.sha512",
+    "/Users/admin/.nuget/packages/swashbuckle.aspnetcore.swaggerui/10.0.1/swashbuckle.aspnetcore.swaggerui.10.0.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Access to the path '/Users/admin/.local/share/NuGet/http-cache/670c1461c29885f9aa22c281d8b7da90845b38e4$ps:_api.nuget.org_v3_index.json/vuln_index.dat-new' is denied.",
+      "projectPath": "/Users/admin/RiderProjects/Shefat.NumberGame/Shefat.NumberGame/Shefat.NumberGame.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/admin/RiderProjects/Shefat.NumberGame/Shefat.NumberGame/Shefat.NumberGame.csproj",
+      "targetGraphs": []
+    }
+  ]
+}
