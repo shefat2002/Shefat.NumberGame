@@ -1,15 +1,14 @@
 using System.Numerics;
 using Shefat.NumberGame.Hubs;
 using Shefat.NumberGame.Services;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var redisConn = builder.Configuration.GetConnectionString("Redis") ?? "localhost:6379";
 
-builder.Services.AddSignalR()
-    .AddStackExchangeRedis(redisConn, options => {
-        options.Configuration.ChannelPrefix = "Number";
-    });
+builder.Services.AddSignalR();
+
 //CORS
 builder.Services.AddCors(options =>
 {

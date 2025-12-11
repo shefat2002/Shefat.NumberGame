@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shefat.NumberGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+303089bfc76733dbde237608901925e7cc725afa")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shefat.NumberGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shefat.NumberGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
